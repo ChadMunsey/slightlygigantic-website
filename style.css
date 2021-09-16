@@ -1,0 +1,594 @@
+/*
+ Theme Name:   Slightly Gigantic
+ Theme URI:    http://mindbinge.net/
+ Description:  Twenty Twenty-One Child Theme
+ Author:       Chad Munsey
+ Author URI:   http://mindbinge.net
+ Template:     twentytwentyone
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentyfifteenchild
+*/
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+:root {
+  --global--color-gray: #aaaaaa;
+  --global--color-primary: var(--global--color-gray);
+  --primary-nav--font-size: var(--global--font-size-lg);
+  --global--spacing-horizontal: 15px;
+  --button--color-text-hover: ##ffffff;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: #aaaaaa;
+}
+
+.wp-block-button .wp-block-button__link {
+  border-radius: 10px;
+}
+
+/* Bootstrap Overides */
+.row > * {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Header */
+
+.site-header {
+  position: absolute;
+  z-index: 1;
+}
+
+.site-header,
+.widget-area,
+.site-footer {
+  padding-top: calc(0.5 * var(--global--spacing-vertical));
+}
+
+.site-main {
+  padding-top: calc(0 * var(--global--spacing-vertical));
+  padding-bottom: calc(0 * var(--global--spacing-vertical));
+}
+
+.site-main > * {
+  margin-top: 0;
+}
+
+.front-page {
+  padding-top: 0;
+}
+
+/**************************/
+/*    Main Navigation     */
+/**************************/
+
+.primary-navigation {
+  margin-left: 0.75em;
+}
+.primary-navigation a {
+  padding: 10px 0;
+  display: block;
+  font-family: var(--primary-nav--font-family);
+  font-size: var(--primary-nav--font-size);
+  font-weight: var(--primary-nav--font-weight);
+}
+
+.primary-navigation svg {
+  width: 2em;
+  height: 2em;
+  fill: #ffffff;
+}
+.offcanvas-header {
+  background-color: #000000;
+}
+.offcanvas-body {
+  background-color: #000000;
+}
+.primary-menu-container ul {
+  list-style-type: none;
+}
+
+/**************************/
+/*      Front Page        */
+/**************************/
+
+.fp-main-container {
+  width: 100%;
+  position: relative;
+  top: 0px;
+}
+
+.fp-logo-container {
+  position: relative;
+  text-align: center;
+}
+
+.sg-mainlogo {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0.8em;
+}
+
+.sg-mainlogo .sg-logoimage {
+  height: 30%;
+  width: 30%;
+}
+
+.fp-topimage {
+  padding-bottom: 60px;
+}
+
+.fp-topsocial {
+  position: absolute;
+  max-width: 320px;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fp-topsocial .footer-navigation-wrapper li a {
+  padding: 0;
+}
+
+.fp-topsocial .footer-navigation-wrapper li .svg-icon {
+  width: 50px;
+  height: 50px;
+  fill: #ffffff;
+}
+
+.fp-news {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* NewsItem Widget */
+
+.fp-newsitem {
+  width: 100%;
+  background-color: #111111;
+  height: 100%;
+  border-bottom: 20px solid #000000;
+}
+
+.fp-newsitem-image {
+  padding-top: 0;
+  text-align: center;
+}
+
+.fp-newsitem-title {
+  text-align: center;
+}
+
+.fp-newsitem-excerpt {
+  color: #aaaaaa;
+}
+
+.fp-music-container {
+  position: relative;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.fp-music {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Streaming Icons */
+.fp-streaming-container {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 1em 0.5em 2em 0.5em;
+  position: relative;
+}
+
+.fp-streaming-container .col-4 {
+  padding-top: 0.5em;
+}
+
+.fp-spotifycontainer {
+  position: relative;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding-top: 40px;
+  border: 0;
+}
+
+.fp-video-container {
+  position: relative;
+  text-align: center;
+  border-top: 40px solid #1a1a1a;
+  border-bottom: 40px solid #1a1a1a;
+}
+
+.fp-video {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fp-videoembed {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/**************************/
+/*     Interior Page      */
+/**************************/
+
+.site-main > article > *,
+.site-main > .not-found > *,
+.entry-content > *,
+[class*="inner-container"] > *,
+.wp-block-template-part > *,
+.wp-block-post-template :where(li > *) {
+  margin-top: 0;
+}
+
+.wp-block-gallery {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+header {
+  padding-bottom: 0;
+}
+
+.interior-topimage {
+  padding-bottom: 10px;
+}
+
+.interior-topsocial {
+  bottom: 15%;
+}
+
+.site-main > article > header {
+  margin-bottom: 0;
+}
+
+.interior-headline {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.entry-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+entry-content > *:last-child,
+.entry-content > *.alignfull.has-background {
+  margin-bottom: 30px;
+}
+
+.entry-header {
+  margin-top: 0;
+}
+
+/**************************/
+/*      Latest News       */
+/**************************/
+
+.site-main > * {
+  margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+}
+
+.latest-news {
+  width: 90%;
+  background-color: #111111;
+  height: 100%;
+}
+
+.latest-news p {
+  color: #aaaaaa;
+}
+
+.post-thumbnail {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 300px;
+  width: 300px;
+}
+
+.entry-header .post-thumbnail,
+.singular .post-thumbnail,
+.alignfull [class*="inner-container"] > .alignwide,
+.alignwide [class*="inner-container"] > .alignwide {
+  width: 300px;
+}
+
+.post-thumbnail .wp-post-image {
+  margin-top: 0;
+}
+
+.entry-header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/**************************/
+/*      Subscribe         */
+/**************************/
+
+.entry-content .subscribe {
+  margin-top: 1em;
+}
+.subscribe-pg {
+  margin-top: 2em;
+}
+
+/**************************/
+/*        Footer          */
+/**************************/
+
+.site-footer > .site-info {
+  border-top: none;
+}
+
+.footer-socialarea .footer-navigation-wrapper li .svg-icon {
+  fill: #666666;
+  width: 48px;
+  height: 48px;
+}
+
+.footer-navigation {
+  margin-top: calc(0.5 * var(--global--spacing-vertical));
+  margin-bottom: calc(0 * var(--global--spacing-vertical));
+  text-align: center;
+}
+
+.footer-navigation-wrapper {
+  display: inline-block;
+}
+
+.site-footer > .site-info {
+  padding-top: 0;
+}
+
+.site-logo {
+  margin: 0;
+  text-align: center;
+}
+
+.footer-socialarea {
+  vertical-align: middle;
+}
+
+.ftr-linkcontainer {
+  vertical-align: middle;
+}
+
+.ftr-toprow {
+  border-bottom: 1px solid #333333;
+  padding-bottom: 15px;
+}
+
+.ftr-toprow ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.ftr-toprow ul li {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.ftr-bottomrow {
+  padding-bottom: 10px;
+}
+
+.footer-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 0.8em;
+  color: #aaaaaa;
+}
+
+.footer-list li {
+  display: inline-block;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.ftr-toprow a:link,
+.ftr-bottomrow a:link {
+  text-decoration: none;
+}
+
+.ftr-toprow a:hover,
+.ftr-bottomrow a:hover {
+  text-decoration: underline dotted;
+}
+
+/**************************/
+/*  Text Signup form      */
+/**************************/
+
+.ez-widget {
+  background-color: #002d40;
+}
+#ez-form {
+  margin-top: 1em;
+}
+.ez-form-group {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  width: 80%;
+}
+.ez-form-group input {
+  border-radius: 10px;
+}
+
+/**************************/
+/**************************/
+/*    Media Queries       */
+/**************************/
+/**************************/
+
+@media screen and (min-width: 482px) {
+  .site-header {
+    padding-top: calc(0.5 * var(--global--spacing-vertical) / 1);
+    padding-bottom: calc(0.5 * var(--global--spacing-vertical));
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .sg-mainlogo {
+    position: absolute;
+    top: 3em;
+  }
+  .sg-mainlogo .sg-logoimage {
+    height: 25%;
+    width: 25%;
+  }
+  .fp-topimage {
+    padding-bottom: 0;
+  }
+  .fp-topsocial {
+    position: absolute;
+    bottom: 6em;
+  }
+  .fp-news {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    right: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .interior-headline {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    right: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .fp-text-overlay {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    right: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .fp-streaming-container {
+    position: absolute;
+    top: 25%;
+    width: 60%;
+    left: 20%;
+    border-radius: 1em;
+  }
+  .fp-video-container {
+    position: relative;
+    border-top: 30px solid #1a1a1a;
+    border-bottom: 30px solid #1a1a1a;
+  }
+  .fp-videoembed {
+    position: absolute;
+    top: 25%;
+    width: 60%;
+    left: 20%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .primary-navigation {
+    margin-left: 2em;
+    margin-top: 0.5em;
+  }
+  .fp-topsocial .footer-navigation-wrapper li .svg-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .fp-spotifycontainer {
+    position: absolute;
+    top: 53%;
+    width: 60%;
+    left: 20%;
+    border-radius: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .footer-navigation {
+    margin-top: calc(0 * var(--global--spacing-vertical));
+  }
+  .latest-news {
+    width: 95%;
+  }
+  .ez-widget {
+    margin-top: 2em;
+    border-radius: 20px;
+  }
+  .ez-form-group {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 822px) {
+  .interior-topsocial .footer-navigation-wrapper li .svg-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .site-header {
+    padding-top: calc(0.5 * var(--global--spacing-vertical));
+  }
+  .site-footer > .site-info {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .primary-navigation svg {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  .fp-newsitem-image {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .primary-navigation {
+    margin-left: 3em;
+    margin-top: 1em;
+  }
+  .primary-navigation svg {
+    width: 3em;
+    height: 3em;
+  }
+  .fp-newsitem {
+    width: 95%;
+  }
+  .footer-navigation {
+    margin-top: calc(0.75 * var(--global--spacing-vertical));
+  }
+}
